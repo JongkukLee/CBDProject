@@ -6,7 +6,7 @@ layout: default
 This website introdues the methodology of ["CBD(Component Based Development)"](http://) project giving [POSCO]() [MES (Manufacturing Execution System)]().<br />
 
 >[POSCO]() is the the world's fourth-largest steelmaker by this measure in 2015. As steel-making is the most process industory, there is pursuited non-stop system from plan to delivery.<br />
-![Image](/contents/img/posco.jpg)
+![Image](/CBDProject/contents/img/posco.jpg)
 
 >[MES (Manufacturing Execution System)]() is the management system of the produce activity management system on real-time from determining the optimized job-order to garunteeing the quality assurance.
 There was POSCO project Between 2002 and 2004 with nearly 300 million dolar IT buget.<br />
