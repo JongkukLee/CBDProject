@@ -6,7 +6,7 @@ layout: default
 ---
 
 |---|---|
-|![Image](/contents/img/jongkuk1.jpg)| • JAVA, WEB Programmer <br />• 50 Disera Dr, Toronto, Thornhill, ON L4J9E9 <br /> • Email: [jongkuk.jay.lee@gmail.com](http://mailto:jongkuk.jay.lee@gmail.com) &nbsp;&nbsp;&nbsp;[Resume (Jongkuk Lee) .docx](/CBDProject/contents/doc/Resume(JongkukLee).docx)|
+|![Image]({{ site.globalurl }}/contents/img/jongkuk1.jpg)| • JAVA, WEB Programmer <br />• 50 Disera Dr, Toronto, Thornhill, ON L4J9E9 <br /> • Email: [jongkuk.jay.lee@gmail.com](http://mailto:jongkuk.jay.lee@gmail.com) &nbsp;&nbsp;&nbsp;[Resume (Jongkuk Lee) .docx](/CBDProject/contents/doc/Resume(JongkukLee).docx)|
 
 ---
 ### OBJECTIVE### 

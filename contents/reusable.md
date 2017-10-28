@@ -9,17 +9,17 @@ When mentioning [Compnent Based Development (CBD)](http://), we need to focus on
 
 When a project starts, components should be classified in the view of reusability and be checked the adaptibility through developping and applying the prototypes. In the next phase, it should be defined and analyzed in the business and system perspective for developping the components. In the stage of implementation, such deliverables will be more clearly designed and implemented as components.<br />
 #### Figure1.how to apply reusable components in applications ####
-![Image](/contents/img/reuse1.jpg)
+![Image]({{ site.globalurl }}/contents/img/reuse1.jpg)
 
 Figure1 shows the developing procedure and the usage for reusable components. The components are managed in the component pool. Developers can select and apply the components, which are needed in their user interface (UI) applications or non user interface (NON-UI) applications. Note that there are all UI components, NON-UI components and common ones in one component pool.<br />
 
 #### Figure2.when components change ####
-![Image](/contents/img/reuse2.jpg)
+![Image]({{ site.globalurl }}/contents/img/reuse2.jpg)
 
 Figure2 shows when the components are changed, there are little effects in the applications. That is the most reason of why we use  reusable components in projects.<br />
 
 #### Figure3.Reusable Components Deploy ####
-![Image](/contents/img/reuse3.jpg)
+![Image]({{ site.globalurl }}/contents/img/reuse3.jpg)
 
 Figure3 shows where components are located in MVC -- **Model, View, Controller** -- model. In **View** part, the components have functionalities to display a logo, list of views (Lovs), tables, scrolls and so on using JAVA script, Tag Library, Applet. In **Controller part**, the components play a role in controllinga and processing the request from processing computers (P/C), enterprise resource planning (ERP) system, and other external systems. Also, this layer can controll and transact the data from graphic user interfaces (GUIs). Lastly, in **Model** layer, the components include the modules to connect to database system and to handle business rules. <br />
 

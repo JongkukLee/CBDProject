@@ -2,7 +2,7 @@
 layout: default
 ---
 ---
-# UI Component
+# NON-UI Component
 ---
 
 **I will make non-ui component part here!!!!**
