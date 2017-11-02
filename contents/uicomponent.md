@@ -44,7 +44,47 @@ The fisrt step is displaying all functionalities to achive A company's requireme
 |Price                         |Not Need             |Need            |Need    |
 |Discount rate                 |Not Need             |Need            |Need    |
 
-As you can see in Table1, 'Working Shift Group', 'Production amount by Shift', and 'Total Stock' could be used all dempartments. So, they will subject to candinate of UI component. Also, Price and Discount rate will subject to UI component for Sales Department and ERP Team.<br />
+As you can see in Table1, 'Working Shift Group', 'Production amount by Shift', and 'Total Stock' could be used all dempartments. So, they will subject to candidate of UI component. Also, Price and Discount rate will subject to UI component for Sales Department and ERP Team.<br />
+
+So, we will make each page like these: ProductOutputQuery.html, SalesProductsQuery.html, BillOfMaterialQuery.html<br />
+
+ProductOutputQuery.html will include Logo, Titile, Working Shift Group Lov component, Production amount by Shift output, Total Stock output, and Current Products results tables including Plate Steel, Specail Steel, Stainless Steel, Mn Steel<br />
+
+SalesProductsQuery.html will include Logo, Titile, product name, Price, Discount rate, and Current Products Order tables including customer, due-date, amount, detination, comments<br />
+
+BillOfMaterialQuery.html will include Logo, Titile, Working Shift Group Lov component, Production amount by Shift output, Total Stock output, and original price by date tables with product name, result amount, sales amount, suplus amount<br />
+
+Now, we finished all preparation to create applications.<br />
+In Production Department project, we will create some components: ShowLogoACompany.js, ShowTitle.js, ShowReactProductResultByShift.js, ShowTableReactCurrentResultByProductionByShift.js<br />
+
+In Sales Department project, we will create only ShowTableSalesMonitorByProducttionaByShift.js.<br />
+
+Lastly, ERP Team can just use the reusable compnents from two projects.<br />
+
+You need to note that in Sales Department project, they do not need to develop the ShowLogoACompany.js, ShowTitle.js, ShowReactProductResultByShift.js. They can use the existing components form the previous project. Also, ERP Team do not involve new project. They can use all components which are needed to create new pages.<br />
+
+In this example, we assumed to make only one page for each department. However, what if there are needed a hundred pages? We can understand A company can superisingly cut down their budget for new projects and software maintenances.<br />
+
+To demonstrate this example, I create the sample reusable components with [REACT](http://)<br /> 
+For this case, each source codes will be like these: <br />
+
+
+
+
+Figure2 shows where each pages will be located in the entire system.<br />
+
+
+In the next step, we are talking about the [NON-UI component]({{ site.globalurl }}/contents/nonuicomponent.md).
+
+
+
+
+
+
+
+
+
+
 
 
 
