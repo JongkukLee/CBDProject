@@ -46,7 +46,51 @@ In this project, the receivers and senders are different operator systems and de
 #### Figure4. Interface Diagram ####
 ![image]({{ site.globalurl }}/contents/img/reuse9.jpg)
 
-Well, what is the first step? To communicate between heterogeneous systems, we have to decide protocol specification called 'INTERFACE'. Note that receiver has to make the interface layout. Table1 
+Well, what is the first step? To communicate between heterogeneous systems, we have to decide protocol specification called 'INTERFACE'. Note that receiver has to make the interface layout. First, assume that the receiver is ERP system, and sender is manufaturing system. So, manufacturing system sends the product result data to ERP system through interface. Second, when ERP system receives data, it becomes a sender, and send the answer-back to manufacturing system through interface.<br />
+Table1 shows the product result interface layout, and Table2 shows the answer-back layout.<br />
+
+### Table1. product result interface ###
+
+|Field name     |Type       |Number          |Decimal |Definition            |Data Example        | 
+|---------------|-----------|----------------|--------|----------------------|--------------------|
+|IFName         |String     |20              |        |interface name        |ABC000001           |
+|SendPg         |String     |20              |        |sender program name   |MBL000001           |
+|SendDt         |Date       |14              |        |sender date           |20161020123141      |
+|SendUrl        |String     |100             |        |sender host name      |erp1.server.ca:8080 |    
+|SendServer     |String     |20              |        |sender host url       |MESServer01         |
+|ReceivePgm     |String     |20              |        |receiver program      |ABC000001           |
+|ReceiveDt      |Date       |14              |        |receiver date         |20161020123149      |
+|ReceiveUrl     |String     |100             |        |receiver host url     |mes1.mbl.ca:8080    |
+|ReceiveServer  |String     |20              |        |receiver host name    |ERPServer01         |
+|ProdID         |String     |20              |        |product id            |STL345890           |
+|ProdNm         |String     |50              |        |product name          |Stainless steel v01 |
+|ProductDt      |Date       |14              |        |product date          |20161020123109      |
+|ProdAmt        |Number     |9               |2       |product amount        |6500                |
+|ProdShift      |String     |1               |        |product work shift    |A                   |
+|ProdFactory    |Number     |6               |        |product factory       |FAC004              |
+
+### Table2. answer-back interface ###
+
+|Field name     |Type       |Number          |Decimal |Definition            |Data Example        | 
+|---------------|-----------|----------------|--------|----------------------|--------------------|
+|IFName         |String     |20              |        |interface name        |MBL000009           |
+|SendPg         |String     |20              |        |sender program name   |ABC000001           |
+|SendDt         |Date       |14              |        |sender date           |20161020123155      |
+|SendUrl        |String     |100             |        |sender host name      |erp1.server.ca:8080 |    
+|SendServer     |String     |20              |        |sender host url       |ERPServer01         |
+|ReceivePgm     |String     |20              |        |receiver program      |MBL000009           |
+|ReceiveDt      |Date       |14              |        |receiver date         |20161020123149      |
+|ReceiveUrl     |String     |100             |        |receiver host url     |mes1.mbl.ca:8080    |
+|ReceiveServer  |String     |20              |        |receiver host name    |MESServer01         |
+|SuccessFlag    |String     |1               |        |Success Flag          |'Y' or 'N'          |
+
+First, manufacturing server will send message to ERP server according to the interface of table1. In this time, url will be http://erp1.server.ca:8080/ABC000001. When 
+, manufacturing server will send message to ERP server according to the interface of table1. In this time, url will be http://erp1.server.ca:8080/ABC000001.
+
+
+
+
+
 
 
 
