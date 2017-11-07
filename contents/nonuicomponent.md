@@ -39,10 +39,24 @@ What is the next step to understand NON-UI componet more?
 
 Here gives a business situation to process the project using NON-UI components.
 
-> A company's Production department requires web pages to query and transact the output of product. After a few months later, Sales department will involve another project to develop the sales inquiry pages to connect with the product result. ERP team wants to monitor the sales and product rate on a daily base. Sales team and ERP team want to reduce their project budget through using Production department's system modules. What is the solution? <br />
+> A company's Production department requires application automatically to receive and transact the information of product generated from processing computers. Also, Sales department needs the appliaton to handle therir sales result which is requested by desktop or notebook, mobile phone, and tarblet. All result of product and sales must be automatically delivered to ERP system. Production department system has Window Operate System, Sales Deapartment system has Linux Operate System, and ERP system is Unix sytem. What is the solution? <br />
 
-As you know, the answer is applying a component based development methodology to the project.
-Then, what is the first step? Do you remember we alreay mentioned the procedure for applying the reuable components to system in a project?
+In this project, the receivers and senders are different operator systems and devices. To develop the system consistently and integrately, we need only one solution, and here we will use RESTful API. All requirements are like Figuer4. Interface Diagram.
+
+#### Figure4. Interface Diagram ####
+![image]({{ site.globalurl }}/contents/img/reuse9.jpg)
+
+Well, what is the first step? To communicate between heterogeneous systems, we have to decide protocol specification called 'INTERFACE'. Note that receiver has to make the interface layout. Table1 
+
+
+
+
+
+
+
+
+
+
 
 > When a project starts, components should be classified in the view of reusability and be checked the adaptibility through developping and applying the prototypes. In the next phase, it should be defined and analyzed in the business and system perspective for developping the components. In the stage of implementation, such deliverables will be more clearly designed and implemented as components.<br />
 
@@ -83,10 +97,10 @@ In this example, we assumed to make only one page for each department. However, 
 To demonstrate this example, I create the sample reusable components with [REACT](http://)<br /> 
 For this case, each source codes will be like these: <br />
 
-
-
-
 Figure2 shows where each pages will be located in the entire system.<br />
 
-
 In the next step, we are talking about the [NON-UI Component](http://).
+
+
+
+
