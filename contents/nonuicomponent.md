@@ -54,6 +54,7 @@ Table1 shows the product result interface layout, and Table2 shows the answer-ba
 |Field name     |Type       |Number          |Decimal |Definition            |Data Example        | 
 |---------------|-----------|----------------|--------|----------------------|--------------------|
 |IFName         |String     |20              |        |interface name        |ABC000001           |
+|SendType       |String     |10              |        |send  type            |PUT/PUSU/GET/DELETE |
 |SendPg         |String     |20              |        |sender program name   |MBL000001           |
 |SendDt         |Date       |14              |        |sender date           |20161020123141      |
 |SendUrl        |String     |100             |        |sender host name      |erp1.server.ca:8080 |    
@@ -74,6 +75,7 @@ Table1 shows the product result interface layout, and Table2 shows the answer-ba
 |Field name     |Type       |Number          |Decimal |Definition            |Data Example        | 
 |---------------|-----------|----------------|--------|----------------------|--------------------|
 |IFName         |String     |20              |        |interface name        |MBL000009           |
+|SendType       |String     |10              |        |send  type            |PUT/PUSU/GET/DELETE |
 |SendPg         |String     |20              |        |sender program name   |ABC000001           |
 |SendDt         |Date       |14              |        |sender date           |20161020123155      |
 |SendUrl        |String     |100             |        |sender host name      |erp1.server.ca:8080 |    
@@ -84,67 +86,16 @@ Table1 shows the product result interface layout, and Table2 shows the answer-ba
 |ReceiveServer  |String     |20              |        |receiver host name    |MESServer01         |
 |SuccessFlag    |String     |1               |        |Success Flag          |'Y' or 'N'          |
 
-First, manufacturing server will send message to ERP server according to the interface of table1. In this time, url will be http://erp1.server.ca:8080/ABC000001. When 
-, manufacturing server will send message to ERP server according to the interface of table1. In this time, url will be http://erp1.server.ca:8080/ABC000001.
+Manufacturing server will send message to ERP server according to the interface of table1. In this time, url will be http://erp1.server.ca:8080/ABC000001. When the program ABC000001 of ERP server receives the data message, and if it has no problem to transact, the program returns the answer-back message (ANS-BACK) to manufacturing server for notice the success or fail.<br />
+
+Two demo pages shows the send/receive message simmulation between Manufacturing system and ERP.
+
+Each system is implemented with NodeJS-based application, and using simmulator, manufacturing system send and receive data message in real-time. We can see to increase the number of traffic on the screen.
 
 
+In fact, in POSCO system, there are recorded nearly traffic number of 900,000 per day, and total about 5,500,000,000 bytes are used for sending and receiving message.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-> When a project starts, components should be classified in the view of reusability and be checked the adaptibility through developping and applying the prototypes. In the next phase, it should be defined and analyzed in the business and system perspective for developping the components. In the stage of implementation, such deliverables will be more clearly designed and implemented as components.<br />
-
-We will follow the above process. <br />
-The fisrt step is displaying all functionalities to achive A company's requirements.
-
-### Table1. classfication of functionality ###
-
-|Function                      |Production Department|Sales Department|ERP Team|
-|------------------------------|---------------------|----------------|--------|
-|Working Shift Group           |Need                 |Need            |Need    |
-|Production amount by Shift    |Need                 |Need            |Need    |
-|Total Stock                   |Need                 |Need            |Need    |
-|Price                         |Not Need             |Need            |Need    |
-|Discount rate                 |Not Need             |Need            |Need    |
-
-As you can see in Table1, 'Working Shift Group', 'Production amount by Shift', and 'Total Stock' could be used all dempartments. So, they will subject to candidate of UI component. Also, Price and Discount rate will subject to UI component for Sales Department and ERP Team.<br />
-
-So, we will make each page like these: ProductOutputQuery.html, SalesProductsQuery.html, BillOfMaterialQuery.html<br />
-
-ProductOutputQuery.html will include Logo, Titile, Working Shift Group Lov component, Production amount by Shift output, Total Stock output, and Current Products results tables including Plate Steel, Specail Steel, Stainless Steel, Mn Steel<br />
-
-SalesProductsQuery.html will include Logo, Titile, product name, Price, Discount rate, and Current Products Order tables including customer, due-date, amount, detination, comments<br />
-
-BillOfMaterialQuery.html will include Logo, Titile, Working Shift Group Lov component, Production amount by Shift output, Total Stock output, and original price by date tables with product name, result amount, sales amount, suplus amount<br />
-
-Now, we finished all preparation to create applications.<br />
-In Production Department project, we will create some components: ShowLogoACompany.js, ShowTitle.js, ShowReactProductResultByShift.js, ShowTableReactCurrentResultByProductionByShift.js<br />
-
-In Sales Department project, we will create only ShowTableSalesMonitorByProducttionaByShift.js.<br />
-
-Lastly, ERP Team can just use the reusable compnents from two projects.<br />
-
-You need to note that in Sales Department project, they do not need to develop the ShowLogoACompany.js, ShowTitle.js, ShowReactProductResultByShift.js. They can use the existing components form the previous project. Also, ERP Team do not involve new project. They can use all components which are needed to create new pages.<br />
-
-In this example, we assumed to make only one page for each department. However, what if there are needed a hundred pages? We can understand A company can superisingly cut down their budget for new projects and software maintenances.<br />
-
-To demonstrate this example, I create the sample reusable components with [REACT](http://)<br /> 
-For this case, each source codes will be like these: <br />
-
-Figure2 shows where each pages will be located in the entire system.<br />
-
-In the next step, we are talking about the [NON-UI Component](http://).
-
-
+In [Advanced]({{ site.globalurl }}/contents/advance) menu, we can more deeply dive into the component ocean.
 
 
